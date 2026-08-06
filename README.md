@@ -36,7 +36,40 @@ Original:
 Add this line (example):
 
 ```html
-<p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
+<p><strong>Deployed by:</strong> DMI Cohort 3 | Saima Usman | Group 2 | Week 5 | 06-08-2026</p>
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
+
+## Dynamic Deployment Date
+
+The website footer displays the deployment date automatically using JavaScript.
+
+### Implementation
+
+A `<span>` element is used as a placeholder for the deployment date.
+
+```html
+<span id="deployDate"></span>
+```
+
+JavaScript generates the current date in **DD Mon YYYY** format and inserts it into the footer when the page loads.
+
+```javascript
+const today = new Date();
+
+const options = {
+  day: "2-digit",
+  month: "short",
+  year: "numeric"
+};
+
+document.getElementById("deployDate").textContent =
+  today.toLocaleDateString("en-GB", options);
+```
+
+Example output:
+
+```
+Last Deployment: 07 Aug 2026
+```

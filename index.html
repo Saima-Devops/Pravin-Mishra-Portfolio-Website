@@ -526,13 +526,27 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 - Deployed on 6th August 2026 - By Saima Usman</p>
+        <p>Pravin Mishra Portfolio v1.0 - Deployed on 07 August 2026 - By Saima Usman</p>
+        <p>Last Deployment:
+        <span id="deployDate"></span>
+        </p>
       </div>
 
     </div>
   </footer>
 
+<script>
+    const today = new Date();
 
+    const options = {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+    };
+
+    document.getElementById("deployDate").textContent =
+        today.toLocaleDateString("en-GB", options);
+</script>
 
 </body>
 
